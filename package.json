@@ -47,6 +47,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "fullpage.js": "^3.0.9"
+    "fullpage.js": "^3.0.9",
+    "gsap": "^3.5.1"
   }
 }

@@ -1,13 +1,16 @@
 @import "../../node_modules/fullpage.js/dist/fullpage.min.css";
 
 .section{
-    display: flex;
-    flex-direction: column;
+    text-align: center;
+}
 
-    div{
-        display: flex;
-        flex-direction: row;
-    }
+.section__text{
+    margin-top: 150px;
+    position: fixed; 
+    z-index: 1;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .section_1{
