@@ -1,5 +1,6 @@
 import "../scss/style.scss";
 import fullpage from "fullpage.js";
+import "../../node_modules/fullpage.js/vendors/easings";
 import { gsap } from "gsap";
 import { Power4 } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
@@ -11,7 +12,8 @@ function start() {
 
     new fullpage('#fullpage', {
         scrollBar: true,
-        scrollingSpeed: 300,
+        scrollingSpeed: 400,
+        easing: 'easeInSine',
 
         onLeave: function () {
 
@@ -23,9 +25,9 @@ function start() {
                 ease: Power4.easeOut
             })
 
-            tml.to(".section__text", 0.2, {
+            tml.to(".section__text", 0.3, {
                 opacity: 1,
-                ease: Power4.easeOut
+                ease: Power4.easeIn
             })
 
             gsap.set("h1", {
