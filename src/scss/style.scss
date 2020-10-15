@@ -1,0 +1,27 @@
+@import "../../node_modules/fullpage.js/dist/fullpage.min.css";
+
+.section{
+    display: flex;
+    flex-direction: column;
+
+    div{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.section_1{
+background-color: red;
+}
+
+.section_2{
+    background-color: blue;
+}
+
+.section_3{
+  background-color: yellow;  
+}
+
+.section_4{
+    background-color: purple;
+}
