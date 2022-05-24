@@ -34,9 +34,9 @@ function cssAutoprefixer() {
 			grid: true
 		})
 	];
-	return gulp.src('./dist/css/*.css')
+	return gulp.src('./*.css')
 		.pipe(postcss(plugins))
-		.pipe(gulp.dest('./dist/css'));
+		.pipe(gulp.dest('./'));
 }
 
 function cssCompress() {
@@ -46,15 +46,15 @@ function cssCompress() {
 		}),
 		cssnano()
 	];
-	return gulp.src('./dist/css/*.css')
+	return gulp.src('./*.css')
 		.pipe(postcss(plugins))
-		.pipe(gulp.dest('./dist/css'));
+		.pipe(gulp.dest('./'));
 }
 
 function injectString() {
 
 	return gulp.src('./style.css')
-		.pipe(inject.prepend('/* Theme Name: Portfolio\n Author: Aivars\n Version: 1.0 */'))
+		.pipe(inject.prepend('/* Theme Name: Faccia\n Author: Aivars\n Version: 1.0 */'))
 		.pipe(gulp.dest('./'));
 }
 
@@ -63,4 +63,4 @@ function injectString() {
 exports.default = series(compressImages);
 
 // Scripts
-exports.build = series(cssAutoprefixer, cssCompress);
+exports.build = series(cssAutoprefixer, cssCompress, injectString);
